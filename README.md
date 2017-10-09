@@ -1,3 +1,8 @@
-# james
+# R package 'james'
 
-devtools::install_github("mdijkstracpb/james")
+## Install
+
+  devtools::install_github("mdijkstracpb/james")
+
+## Example
+  library(james)

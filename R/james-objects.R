@@ -42,10 +42,12 @@ JRoot <- R6::R6Class("JRoot",
     data_lst          = list(),
     initialize        = function(file_name, active_scenario, active_project) {
       if (file.exists(file_name)) {
+        cat(paste0("Opening ", file_name, "..."))
         j_root_file    <- readRDS(file_name)
         self$data_lst  <- j_root_file$data_lst
         self$file_name <- file_name # store file name if successful        
       } else {
+        cat(paste0("Creating ", file_name, "..."))
         self$file_name <- file_name
         self$save()
       }
